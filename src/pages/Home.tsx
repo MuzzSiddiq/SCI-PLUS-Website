@@ -3,8 +3,10 @@ import {
   ShieldCheck,
   CalendarCheck,
   CreditCard,
-  MessageCircle,
+  MessageCircle, 
 } from "lucide-react";
+
+import { Home, Sparkles, Truck, Wrench } from "lucide-react";
 
 const features = [
   {
@@ -33,7 +35,7 @@ const features = [
   },
 ];
 
-export default function Home() {
+export default function home() {
   return (
     <main>
       <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center">
@@ -64,17 +66,63 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-emerald-50 rounded-[3rem] p-10 text-center">
-          <div className="bg-white rounded-[2rem] shadow-xl p-8 max-w-sm mx-auto">
-            <h3 className="font-bold text-xl mb-3">Book trusted pros</h3>
-            <p className="text-slate-500 mb-6">Cleaning, repairs, and more.</p>
-            <div className="grid grid-cols-2 gap-3 text-sm">
-              <div className="bg-slate-50 p-4 rounded-xl">Home Cleaning</div>
-              <div className="bg-slate-50 p-4 rounded-xl">Deep Cleaning</div>
-              <div className="bg-slate-50 p-4 rounded-xl">Moving Help</div>
-              <div className="bg-slate-50 p-4 rounded-xl">Repairs</div>
+        <div className="bg-emerald-50 rounded-[2rem] p-8">
+            <div className="bg-white rounded-[2rem] shadow-xl p-6">
+                <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold text-slate-900">
+                    Book trusted pros
+                </h2>
+                <p className="text-slate-500 mt-1">
+                    Cleaning, repairs, and more.
+                </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                {[
+                    {
+                    title: "Home Cleaning",
+                    icon: Home,
+                    image: "/images/home-cleaning.png",
+                    },
+                    {
+                    title: "Deep Cleaning",
+                    icon: Sparkles,
+                    image: "/images/deep-cleaning.png",
+                    },
+                    {
+                    title: "Moving Help",
+                    icon: Truck,
+                    image: "/images/moving-help.png",
+                    },
+                    {
+                    title: "Repairs",
+                    icon: Wrench,
+                    image: "/images/repairs.png",
+                    },
+                ].map(({ title, icon: Icon, image }) => (
+                    <div
+                    key={title}
+                    className="overflow-hidden rounded-2xl bg-white shadow-md border border-slate-100"
+                    >
+                    <img
+                        src={image}
+                        alt={title}
+                        className="h-32 w-full object-cover"
+                    />
+
+                    <div className="flex items-center gap-4 p-4">
+                        <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-emerald-600" />
+                        </div>
+
+                        <h3 className="font-bold text-slate-900">
+                        {title}
+                        </h3>
+                    </div>
+                    </div>
+                ))}
+                </div>
             </div>
-          </div>
         </div>
       </section>
 
