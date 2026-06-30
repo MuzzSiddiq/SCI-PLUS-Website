@@ -38,41 +38,41 @@ const features = [
 export default function home() {
   return (
     <main>
-      <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center">
+      <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center bg-[#0B0B0B]">
         <div>
           <p className="inline-block bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full font-semibold mb-6">
             Trusted • Reliable • Local
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Clean Spaces, <span className="text-emerald-600">Happy Places.</span>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
+            Clean Spaces, <span className="text-emerald-500">Happy Places.</span>
           </h1>
 
-          <p className="text-lg text-slate-600 mt-6 max-w-xl">
+           <p className="text-lg text-slate-300 mt-6 max-w-xl">
             SCI+ connects you with trusted cleaning and home service professionals
             for fast, secure, and reliable help.
-          </p>
+           </p>
 
           <div className="flex gap-4 mt-8">
             <a className="bg-emerald-600 text-white px-7 py-3 rounded-full font-semibold">
               Download the App
             </a>
             <Link
-              to="/how-it-works"
-              className="border px-7 py-3 rounded-full font-semibold"
+            to="/how-it-works"
+            className="border border-zinc-600 text-white px-7 py-3 rounded-full font-semibold hover:border-emerald-500 hover:text-emerald-400 transition"
             >
-              See How It Works
+                See How It Works
             </Link>
           </div>
         </div>
 
-        <div className="bg-emerald-50 rounded-[2rem] p-8">
-            <div className="bg-white rounded-[2rem] shadow-xl p-6">
+        <div className="bg-[#111111] rounded-[2rem] p-8 border border-zinc-800">
+            <div className="bg-zinc-900 rounded-[2rem] shadow-xl p-6 border border-zinc-800">
                 <div className="text-center mb-6">
-                <h2 className="text-2xl font-bold text-slate-900">
+                <h2 className="text-2xl font-bold text-white">
                     Book trusted pros
                 </h2>
-                <p className="text-slate-500 mt-1">
+                <p className="text-slate-400 mt-1">
                     Cleaning, repairs, and more.
                 </p>
                 </div>
@@ -102,7 +102,7 @@ export default function home() {
                 ].map(({ title, icon: Icon, image }) => (
                     <div
                     key={title}
-                    className="overflow-hidden rounded-2xl bg-white shadow-md border border-slate-100"
+                    className="overflow-hidden rounded-2xl bg-zinc-800 shadow-md border border-zinc-700 hover:border-emerald-500 transition"
                     >
                     <img
                         src={image}
@@ -115,8 +115,8 @@ export default function home() {
                         <Icon className="w-6 h-6 text-emerald-600" />
                         </div>
 
-                        <h3 className="font-bold text-slate-900">
-                        {title}
+                        <h3 className="font-bold text-white">
+                            {title}
                         </h3>
                     </div>
                     </div>
@@ -126,65 +126,57 @@ export default function home() {
         </div>
       </section>
 
-    <section className="bg-slate-50 py-24">
+    <section className="bg-[#0B0B0B] py-24">
         <div className="max-w-7xl mx-auto px-6">
-
             <div className="text-center mb-16">
-                <p className="text-emerald-600 font-semibold uppercase tracking-widest">
-                    Why Choose SCI+
-                </p>
+            <p className="text-emerald-400 font-semibold uppercase tracking-widest">
+                Why Choose SCI+
+            </p>
 
-                <h2 className="text-4xl md:text-5xl font-bold mt-4">
-                    Home services made simple.
-                </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-white">
+                Home services made simple.
+            </h2>
 
-                <p className="mt-6 text-slate-600 max-w-2xl mx-auto text-lg">
-                    From booking trusted professionals to secure payments and live
-                    communication, SCI+ gives you everything you need in one place.
-                </p>
+            <p className="mt-6 text-slate-300 max-w-2xl mx-auto text-lg">
+                From booking trusted professionals to secure payments and live
+                communication, SCI+ gives you everything you need in one place.
+            </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                {features.map(({ icon: Icon, title, description }) => (
-
+            {features.map(({ icon: Icon, title, description }) => (
                 <div
                 key={title}
-                className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300"
+                className="group bg-zinc-900 border border-zinc-800 rounded-3xl p-8 shadow-sm hover:border-emerald-500 hover:-translate-y-1 transition duration-300"
                 >
-
-                <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6 transition group-hover:bg-emerald-600">
-
-                    <Icon className="w-8 h-8 text-emerald-600 group-hover:text-white transition" />
-
+                <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition">
+                    <Icon className="w-7 h-7 text-emerald-400 group-hover:text-white transition" />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3 text-white">
                     {title}
                 </h3>
 
-                <p className="text-slate-500 leading-7">
+                <p className="text-slate-400 leading-7">
                     {description}
                 </p>
-
                 </div>
-
-                ))}
-
+            ))}
             </div>
         </div>
     </section>
 
       <section id="download" className="max-w-7xl mx-auto px-6 py-20">
         <div className="bg-emerald-700 text-white rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
+            <div>
             <h2 className="text-3xl font-bold">Ready to book your next service?</h2>
             <p className="text-emerald-100 mt-2">Download SCI+ and get started today.</p>
-          </div>
-          <div className="flex gap-4">
+            </div>
+
+            <div className="flex gap-4">
             <button className="bg-black px-6 py-3 rounded-xl">App Store</button>
             <button className="bg-black px-6 py-3 rounded-xl">Google Play</button>
-          </div>
+            </div>
         </div>
       </section>
     </main>

@@ -23,41 +23,46 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <main className="max-w-7xl mx-auto px-6 py-24">
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <p className="text-emerald-600 font-semibold uppercase tracking-widest">
-          How It Works
-        </p>
+    <main className="bg-[#0B0B0B] text-white">
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <p className="text-emerald-400 font-semibold uppercase tracking-widest">
+            How It Works
+          </p>
 
-        <h1 className="text-5xl font-bold mt-4 mb-6 leading-tight">
-          Book trusted home services in three simple steps.
-        </h1>
+          <h1 className="text-5xl font-bold mt-4 mb-6 leading-tight text-white">
+            Book trusted home services in three simple steps.
+          </h1>
 
-        <p className="text-lg text-slate-600 leading-8">
-          SCI+ keeps the process simple from the moment you request a service to
-          the moment the job is complete.
-        </p>
-      </div>
+          <p className="text-lg text-slate-300 leading-8">
+            SCI+ keeps the process simple from the moment you request a service
+            to the moment the job is complete.
+          </p>
+        </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {steps.map(({ icon: Icon, number, title, text }) => (
-          <div
-            key={title}
-            className="relative bg-slate-50 rounded-3xl p-8 hover:shadow-xl transition"
-          >
-            <span className="text-6xl font-bold text-emerald-100 absolute top-6 right-8">
-              {number}
-            </span>
+        <div className="grid md:grid-cols-3 gap-8">
+          {steps.map(({ icon: Icon, number, title, text }) => (
+            <div
+              key={title}
+              className="relative bg-[#1A1A1F] border border-zinc-700 rounded-3xl p-8 shadow-lg hover:border-emerald-500 hover:-translate-y-1 transition-all duration-300"
+            >
+              <span className="text-6xl font-bold text-emerald-900/40 absolute top-6 right-8">
+                {number}
+              </span>
 
-            <div className="w-16 h-16 rounded-2xl bg-emerald-600 flex items-center justify-center mb-8">
-              <Icon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-emerald-600 flex items-center justify-center mb-8">
+                <Icon className="w-8 h-8 text-white" />
+              </div>
+
+              <h3 className="text-xl font-semibold mb-3 text-white">
+                {title}
+              </h3>
+
+              <p className="text-slate-400 leading-7">{text}</p>
             </div>
-
-            <h3 className="text-xl font-semibold mb-3">{title}</h3>
-            <p className="text-slate-500 leading-7">{text}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
