@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div>
           <h3 className="font-bold mb-3">Contact</h3>
-          <p className="text-slate-400">hello@sci-plus.com</p>
+          <p className="text-slate-400">lasalle@sciplus.ca</p>
           <p className="text-slate-400">+1 (438) 230-9661</p>
         </div>
       </div>

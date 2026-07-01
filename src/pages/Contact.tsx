@@ -4,7 +4,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@sci-plus.com",
+    value: "lasalle@sciplus.ca",
   },
   {
     icon: Phone,
